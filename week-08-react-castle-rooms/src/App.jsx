@@ -1,5 +1,7 @@
 import { useState } from "react";
 import Castle from "./components/01_Castle";
+import SimpleAsyncAwait from "./examples/async/SimpleAsyncAwait";
+import SimpleProAsyncAwait from "./examples/async/SimpleProAsyncAwait";
 
 export default function App() {
   //Creating state Variable
@@ -17,7 +19,7 @@ export default function App() {
       <p className="text-purple-300">
         Message for JSD12:
         <span className="text-yellow-300">
-          {question ? question : " Waiting for a massege....."}
+          {question ? question : " Waiting for a message....."}
         </span>
       </p>
       <textarea
@@ -33,6 +35,8 @@ export default function App() {
         </span>
       </p>
       <Castle question={question} answer={answer} handleAnswer={handleAnswer} />
+      <SimpleAsyncAwait />
+      <SimpleProAsyncAwait />
     </div>
   );
 }
